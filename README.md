@@ -72,7 +72,7 @@ cd zCore && make run mode=release user=1
 To debug, set `RUST_LOG` environment variable to one of `error`, `warn`, `info`, `debug`, `trace`.
 
 ## Testing
- 
+  
 Run Zircon official core-tests:
 
 ```sh

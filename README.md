@@ -9,7 +9,7 @@ Reimplement [Zircon][zircon] microkernel in safe Rust as a userspace program!
 ## Dev Status
 
 🚧 Working In Progress
-
+ 
 - 2020.04.16: Zircon console is working on zCore! 🎉
 
 ## Getting started
@@ -25,6 +25,7 @@ Clone repo and pull prebuilt fuchsia images:
 ```sh
 git clone https://github.com/rcore-os/zCore --recursive
 cd zCore
+git lfs install
 git lfs pull
 ```
 
@@ -56,6 +57,16 @@ Run Zircon on bare-metal (zCore):
 
 ```sh
 cd zCore && make run mode=release [graphic=on] [accel=1]
+```
+
+Build and run your own Zircon user programs:
+
+```sh
+# See template in zircon-user
+cd zircon-user && make zbi mode=release
+
+# Run your programs in zCore
+cd zCore && make run mode=release user=1
 ```
 
 To debug, set `RUST_LOG` environment variable to one of `error`, `warn`, `info`, `debug`, `trace`.

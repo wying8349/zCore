@@ -89,7 +89,7 @@ cd script && python3 core-tests.py
 Check `test-result.txt` for results.
 
 ## Components
-  
+   
 ### Overview
 
 ![](./docs/structure.svg)
